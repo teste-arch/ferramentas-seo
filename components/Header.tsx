@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, MessageCircle, QrCode, Palette, Layers } from "lucide-react";
+import { MessageCircle, QrCode, Palette, Layers } from "lucide-react";
+import { VentoSymbol } from "@/components/vento-symbol";
 
 export default function Header() {
   return (
@@ -9,17 +10,17 @@ export default function Header() {
         {/* Logo / Brand */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 font-bold text-slate-900 transition hover:opacity-90"
+          className="flex items-center gap-2.5 font-bold text-slate-900 transition hover:opacity-90 group"
         >
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white shadow-md shadow-emerald-500/20">
-            <Sparkles className="h-5 w-5" />
+          <div className="flex items-center justify-center">
+            <VentoSymbol size={44} color="#059669" className="transition-transform group-hover:scale-105" />
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-extrabold tracking-tight text-slate-900 leading-tight">
-              Ferramentas<span className="text-emerald-600">SEO</span>
+            <span className="text-xl font-extrabold tracking-tight text-slate-900 leading-tight">
+              Vento<span className="text-emerald-600">flow</span>
             </span>
-            <span className="text-[10px] uppercase font-semibold tracking-wider text-slate-500 -mt-0.5">
-              Online & Grátis
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-500 -mt-0.5">
+              Ferramentas Online & Grátis
             </span>
           </div>
         </Link>

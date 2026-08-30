@@ -15,7 +15,7 @@ import {
   Layers,
 } from "lucide-react";
 import QRCodeGenerator from "@/components/qrcode/QRCodeGenerator";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
 
 export const dynamic = "force-static";
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "Gerador de QR Code online e gratuito. Personalize cores, escolha o nível de correção de erro e baixe em PNG de alta resolução ou vetor SVG.",
     url: FULL_URL,
-    siteName: "Ferramentas SEO",
+    siteName: SITE_NAME,
     locale: "pt_BR",
     type: "website",
     images: [
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-qrcode.png`,
         width: 1200,
         height: 630,
-        alt: "Gerador de QR Code Grátis - Ferramentas SEO",
+        alt: `Gerador de QR Code Grátis - ${SITE_NAME}`,
       },
     ],
   },

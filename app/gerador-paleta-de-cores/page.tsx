@@ -13,7 +13,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ColorPaletteGenerator from "@/components/palette/ColorPaletteGenerator";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
 
 export const dynamic = "force-static";
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description:
       "Gere paletas de 5 cores harmônicas com um clique. Trave cores favoritas, copie códigos HEX/RGB/HSL e exporte em PNG e CSS gratuitamente.",
     url: FULL_URL,
-    siteName: "Ferramentas SEO",
+    siteName: SITE_NAME,
     locale: "pt_BR",
     type: "website",
     images: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-palette.png`,
         width: 1200,
         height: 630,
-        alt: "Gerador de Paleta de Cores - Ferramentas SEO",
+        alt: `Gerador de Paleta de Cores - ${SITE_NAME}`,
       },
     ],
   },

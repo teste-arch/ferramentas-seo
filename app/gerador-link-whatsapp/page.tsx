@@ -14,7 +14,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import WhatsAppGenerator from "@/components/whatsapp/WhatsAppGenerator";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
 
 // Força a renderização 100% estática (SSG) para máxima performance e indexação pelos bots de busca
 export const dynamic = "force-static";
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "Crie seu link do WhatsApp personalizado e QR Code instantâneo. 100% grátis, sem cadastro e direto no navegador.",
     url: FULL_URL,
-    siteName: "Ferramentas SEO",
+    siteName: SITE_NAME,
     locale: "pt_BR",
     type: "website",
     images: [
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-whatsapp.png`,
         width: 1200,
         height: 630,
-        alt: "Gerador de Link WhatsApp - Ferramentas SEO",
+        alt: `Gerador de Link WhatsApp - ${SITE_NAME}`,
       },
     ],
   },

@@ -18,7 +18,7 @@ import {
   X,
 } from "lucide-react";
 
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
 
 interface ColorSwatch {
   id: string;
@@ -293,7 +293,7 @@ export default function ColorPaletteGenerator() {
 
     ctx.fillStyle = "#64748b";
     ctx.font = "18px sans-serif";
-    ctx.fillText(`Gerado por Ferramentas SEO (${SITE_URL.replace(/^https?:\/\//, "")})`, 60, 105);
+    ctx.fillText(`Gerado por ${SITE_NAME} (${SITE_URL.replace(/^https?:\/\//, "")})`, 60, 105);
 
     // 5 Barras de Cores
     const startX = 60;

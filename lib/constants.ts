@@ -6,4 +6,4 @@ export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://ferramentas-seo.vercel.app"
 ).replace(/\/$/, "");
 
-export const SITE_NAME = "Ferramentas SEO";
+export const SITE_NAME = "Ventoflow";

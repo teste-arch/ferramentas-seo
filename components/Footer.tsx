@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
+import { VentoSymbol } from "@/components/vento-symbol";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,12 +12,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand Col */}
           <div className="space-y-4 md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 font-bold text-slate-900">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600 text-white">
-                <Sparkles className="h-4 w-4" />
-              </div>
-              <span className="text-lg font-bold tracking-tight">
-                Ferramentas<span className="text-emerald-600">SEO</span>
+            <Link href="/" className="flex items-center gap-2.5 font-bold text-slate-900 group">
+              <VentoSymbol size={38} color="#059669" className="transition-transform group-hover:scale-105" />
+              <span className="text-xl font-extrabold tracking-tight">
+                Vento<span className="text-emerald-600">flow</span>
               </span>
             </Link>
             <p className="max-w-md text-sm leading-relaxed text-slate-500">
@@ -119,7 +118,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-10 border-t border-slate-100 pt-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-xs text-slate-500">
-            &copy; {currentYear} Ferramentas SEO. Todos os direitos reservados.
+            &copy; {currentYear} Ventoflow. Todos os direitos reservados.
           </p>
           <p className="flex items-center gap-1 text-xs text-slate-400">
             Feito com <Heart className="h-3.5 w-3.5 text-rose-500 fill-rose-500" /> para impulsionar seus resultados.
