@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   MessageCircle,
   QrCode,
+  Palette,
   FileText,
   Search,
   ArrowRight,
@@ -28,6 +29,16 @@ export default function Home() {
       description:
         "Crie QR Codes personalizados para links, Wi-Fi e textos com download em PNG e SVG.",
       icon: QrCode,
+      badge: "Disponível",
+      badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
+      active: true,
+    },
+    {
+      title: "Gerador de Paleta de Cores",
+      slug: "/gerador-paleta-de-cores",
+      description:
+        "Crie paletas harmônicas de 5 cores com travas, visualização HEX/RGB/HSL e exportação CSS/PNG.",
+      icon: Palette,
       badge: "Disponível",
       badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
       active: true,
@@ -88,6 +99,13 @@ export default function Home() {
             >
               <QrCode className="h-5 w-5 text-emerald-600" />
               Gerador de QR Code
+            </Link>
+            <Link
+              href="/gerador-paleta-de-cores"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-base font-semibold text-slate-800 shadow-sm transition hover:bg-slate-50 hover:text-emerald-600"
+            >
+              <Palette className="h-5 w-5 text-emerald-600" />
+              Paleta de Cores
             </Link>
           </div>
         </div>

@@ -51,6 +51,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/gerador-paleta-de-cores"
+                  className="text-slate-600 transition hover:text-emerald-600"
+                >
+                  Gerador de Paleta de Cores
+                </Link>
+              </li>
+              <li>
                 <span className="text-slate-400 flex items-center gap-1.5">
                   Contador de Caracteres
                   <span className="text-[10px] bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded font-medium">

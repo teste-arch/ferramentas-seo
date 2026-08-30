@@ -9,6 +9,7 @@ import {
   Megaphone,
   Share2,
   QrCode,
+  Palette,
   ArrowRight,
   Sparkles,
 } from "lucide-react";
@@ -335,31 +336,61 @@ export default function GeradorLinkWhatsAppPage() {
             </div>
           </div>
 
-          {/* RELATED TOOLS PROMO SECTION (Combo WhatsApp + QR Code) */}
+          {/* RELATED TOOLS PROMO SECTION */}
           <section className="rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-50 via-teal-50/40 to-white p-8 sm:p-10 shadow-sm">
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="space-y-6">
               <div className="space-y-2 max-w-2xl">
                 <div className="inline-flex items-center gap-1.5 rounded-md bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-800 uppercase tracking-wider">
                   <Sparkles className="h-3.5 w-3.5 text-emerald-600" />
-                  Combo Recomendado de Conversão
+                  Ferramentas Relacionadas
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">
-                  Precisa de um QR Code para divulgar o seu link?
+                  Potencialize seu Marketing com Outras Ferramentas Gratuitas
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Gere um QR Code exclusivo para o seu link do WhatsApp e aplique em cartões de visita,
-                  cardápios, balcões, adesivos e banners para facilitar o contato imediato dos seus clientes no mundo físico!
+                  Crie QR Codes para seus links e construa paletas de cores harmônicas para suas páginas e redes sociais.
                 </p>
               </div>
 
-              <div className="shrink-0">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Link
                   href="/gerador-qr-code"
-                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-emerald-600/25 transition hover:bg-emerald-700"
+                  className="flex items-center justify-between rounded-2xl border border-emerald-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md group"
                 >
-                  <QrCode className="h-4 w-4" />
-                  Criar QR Code do Link
-                  <ArrowRight className="h-4 w-4" />
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                      <QrCode className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 group-hover:text-emerald-600 transition">
+                        Gerador de QR Code
+                      </h4>
+                      <p className="text-xs text-slate-500">
+                        Gere QR Codes de alta resolução com download em PNG e SVG.
+                      </p>
+                    </div>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-slate-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition shrink-0 ml-2" />
+                </Link>
+
+                <Link
+                  href="/gerador-paleta-de-cores"
+                  className="flex items-center justify-between rounded-2xl border border-emerald-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                      <Palette className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 group-hover:text-emerald-600 transition">
+                        Gerador de Paleta de Cores
+                      </h4>
+                      <p className="text-xs text-slate-500">
+                        Crie paletas de 5 cores harmônicas e exporte em CSS e PNG.
+                      </p>
+                    </div>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-slate-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition shrink-0 ml-2" />
                 </Link>
               </div>
             </div>

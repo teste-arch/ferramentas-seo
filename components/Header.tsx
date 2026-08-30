@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, MessageCircle, QrCode, Layers } from "lucide-react";
+import { Sparkles, MessageCircle, QrCode, Palette, Layers } from "lucide-react";
 
 export default function Header() {
   return (
@@ -45,6 +45,13 @@ export default function Header() {
           >
             <QrCode className="h-4 w-4 text-emerald-600" />
             Gerador QR Code
+          </Link>
+          <Link
+            href="/gerador-paleta-de-cores"
+            className="flex items-center gap-1.5 text-sm font-medium text-slate-600 transition hover:text-emerald-600"
+          >
+            <Palette className="h-4 w-4 text-emerald-600" />
+            Paleta de Cores
           </Link>
           <Link
             href="/#todas-ferramentas"
