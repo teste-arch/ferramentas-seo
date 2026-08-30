@@ -8,13 +8,16 @@ import {
   Store,
   Megaphone,
   Share2,
+  QrCode,
+  ArrowRight,
+  Sparkles,
 } from "lucide-react";
 import WhatsAppGenerator from "@/components/whatsapp/WhatsAppGenerator";
+import { SITE_URL } from "@/lib/constants";
 
 // Força a renderização 100% estática (SSG) para máxima performance e indexação pelos bots de busca
 export const dynamic = "force-static";
 
-const SITE_URL = "https://ferramentasseo.com.br";
 const PAGE_PATH = "/gerador-link-whatsapp";
 const FULL_URL = `${SITE_URL}${PAGE_PATH}`;
 
@@ -331,6 +334,36 @@ export default function GeradorLinkWhatsAppPage() {
               </div>
             </div>
           </div>
+
+          {/* RELATED TOOLS PROMO SECTION (Combo WhatsApp + QR Code) */}
+          <section className="rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-50 via-teal-50/40 to-white p-8 sm:p-10 shadow-sm">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+              <div className="space-y-2 max-w-2xl">
+                <div className="inline-flex items-center gap-1.5 rounded-md bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-800 uppercase tracking-wider">
+                  <Sparkles className="h-3.5 w-3.5 text-emerald-600" />
+                  Combo Recomendado de Conversão
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Precisa de um QR Code para divulgar o seu link?
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Gere um QR Code exclusivo para o seu link do WhatsApp e aplique em cartões de visita,
+                  cardápios, balcões, adesivos e banners para facilitar o contato imediato dos seus clientes no mundo físico!
+                </p>
+              </div>
+
+              <div className="shrink-0">
+                <Link
+                  href="/gerador-qr-code"
+                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-emerald-600/25 transition hover:bg-emerald-700"
+                >
+                  <QrCode className="h-4 w-4" />
+                  Criar QR Code do Link
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </section>
 
           {/* FAQ Section with Rich Schema Correspondence */}
           <section aria-label="Perguntas Frequentes sobre o Gerador de Link WhatsApp" className="space-y-6">

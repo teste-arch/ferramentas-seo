@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, MessageCircle, Layers } from "lucide-react";
+import { Sparkles, MessageCircle, QrCode, Layers } from "lucide-react";
 
 export default function Header() {
   return (
@@ -38,6 +38,13 @@ export default function Header() {
           >
             <MessageCircle className="h-4 w-4 text-emerald-600" />
             Gerador WhatsApp
+          </Link>
+          <Link
+            href="/gerador-qr-code"
+            className="flex items-center gap-1.5 text-sm font-medium text-slate-600 transition hover:text-emerald-600"
+          >
+            <QrCode className="h-4 w-4 text-emerald-600" />
+            Gerador QR Code
           </Link>
           <Link
             href="/#todas-ferramentas"

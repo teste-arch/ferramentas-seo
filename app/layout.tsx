@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,8 +13,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ferramentas SEO | Utilitários Online Gratuitos",
-    template: "%s | Ferramentas SEO",
+    default: `${SITE_NAME} | Utilitários Online Gratuitos`,
+    template: `%s | ${SITE_NAME}`,
   },
   description:
     "Suíte completa de ferramentas gratuitas para SEO, marketing digital e produtividade online. Gere links de WhatsApp, QR Codes, tags e muito mais.",
@@ -21,19 +22,20 @@ export const metadata: Metadata = {
     "ferramentas seo",
     "gerador link whatsapp",
     "gerador whatsapp",
+    "gerador de qr code",
     "link direto whatsapp",
     "marketing digital",
     "seo utilitarios",
   ],
-  authors: [{ name: "Ferramentas SEO" }],
-  creator: "Ferramentas SEO",
-  metadataBase: new URL("https://ferramentasseo.com.br"),
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://ferramentasseo.com.br",
-    siteName: "Ferramentas SEO",
-    title: "Ferramentas SEO | Utilitários Online Gratuitos",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} | Utilitários Online Gratuitos`,
     description:
       "Suíte de ferramentas gratuitas para SEO, marketing digital e produtividade online.",
   },

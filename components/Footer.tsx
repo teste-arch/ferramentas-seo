@@ -43,12 +43,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <span className="text-slate-400 flex items-center gap-1.5">
+                <Link
+                  href="/gerador-qr-code"
+                  className="text-slate-600 transition hover:text-emerald-600"
+                >
                   Gerador de QR Code
-                  <span className="text-[10px] bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded font-medium">
-                    Em breve
-                  </span>
-                </span>
+                </Link>
               </li>
               <li>
                 <span className="text-slate-400 flex items-center gap-1.5">

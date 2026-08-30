@@ -16,7 +16,7 @@ export default function Home() {
       title: "Gerador de Link WhatsApp",
       slug: "/gerador-link-whatsapp",
       description:
-        "Crie links personalizados do WhatsApp com número e mensagem pré-definida em poucos segundos.",
+        "Crie links wa.me personalizados com mensagem pré-definida em poucos segundos.",
       icon: MessageCircle,
       badge: "Disponível",
       badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
@@ -24,19 +24,19 @@ export default function Home() {
     },
     {
       title: "Gerador de QR Code",
-      slug: "#",
+      slug: "/gerador-qr-code",
       description:
-        "Gere QR Codes de alta resolução para links, WhatsApp, Wi-Fi, textos e cartões de visita virtuais.",
+        "Crie QR Codes personalizados para links, Wi-Fi e textos com download em PNG e SVG.",
       icon: QrCode,
-      badge: "Em Breve",
-      badgeColor: "bg-slate-100 text-slate-600 border-slate-200",
-      active: false,
+      badge: "Disponível",
+      badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
+      active: true,
     },
     {
       title: "Contador de Palavras & Caracteres",
       slug: "#",
       description:
-        "Analise contagem de caracteres, palavras, parágrafos e tempo estimado de leitura de qualquer texto.",
+        "Analise contagem de caracteres, palavras, parágrafos e tempo de leitura de qualquer texto.",
       icon: FileText,
       badge: "Em Breve",
       badgeColor: "bg-slate-100 text-slate-600 border-slate-200",
@@ -46,7 +46,7 @@ export default function Home() {
       title: "Gerador de Meta Tags SEO",
       slug: "#",
       description:
-        "Construa e pré-visualize títulos, descrições e OpenGraph tags para o Google, Facebook e Twitter.",
+        "Construa e pré-visualize títulos, descrições e OpenGraph tags para Google e redes sociais.",
       icon: Search,
       badge: "Em Breve",
       badgeColor: "bg-slate-100 text-slate-600 border-slate-200",
@@ -73,13 +73,21 @@ export default function Home() {
             Aumente suas conversões e otimize seu fluxo de trabalho com nossas ferramentas online rápidas,
             leves e 100% gratuitas.
           </p>
-          <div className="mt-8 flex justify-center gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/gerador-link-whatsapp"
-              className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-emerald-600/25 transition hover:bg-emerald-700"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-emerald-600/25 transition hover:bg-emerald-700"
             >
-              Usar Gerador de WhatsApp
+              <MessageCircle className="h-5 w-5" />
+              Gerador de WhatsApp
               <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/gerador-qr-code"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-base font-semibold text-slate-800 shadow-sm transition hover:bg-slate-50 hover:text-emerald-600"
+            >
+              <QrCode className="h-5 w-5 text-emerald-600" />
+              Gerador de QR Code
             </Link>
           </div>
         </div>
