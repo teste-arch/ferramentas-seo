@@ -9,7 +9,9 @@ import {
   ShieldCheck,
   Zap,
   Sparkles,
+  ExternalLink,
 } from "lucide-react";
+import { COMPANY_URL } from "@/lib/constants";
 
 export default function Home() {
   const tools = [
@@ -72,7 +74,17 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-800 mb-6">
             <Sparkles className="h-3.5 w-3.5 text-emerald-600" />
-            Utilitários Gratuitos & Sem Cadastro
+            <span>Uma iniciativa</span>
+            <a
+              href={COMPANY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold underline decoration-emerald-500/60 hover:text-emerald-950 transition inline-flex items-center gap-0.5"
+            >
+              <span>Ventoflow</span>
+              <ExternalLink className="h-3 w-3" />
+            </a>
+            <span>• Utilitários Gratuitos & Sem Cadastro</span>
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
             Ferramentas Práticas para <br className="hidden sm:inline" />
@@ -214,6 +226,30 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Ventoflow Company Creator Callout */}
+          <div className="mt-8 pt-8 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-6 bg-gradient-to-r from-emerald-50/60 via-teal-50/40 to-slate-50 -mx-8 sm:-mx-12 -mb-8 sm:-mb-12 p-8 sm:p-10 rounded-b-3xl">
+            <div className="space-y-1 text-center sm:text-left">
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2.5 py-0.5 rounded-full">
+                Empresa Criadora
+              </span>
+              <h3 className="text-lg font-bold text-slate-900">
+                Construído pela engenharia da Ventoflow
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
+                A Ventoflow é um Hub de Engenharia e Automação de Missão Crítica focado em infraestrutura invisível, zero-touch workflows e operações de alta confiabilidade.
+              </p>
+            </div>
+            <a
+              href={COMPANY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 px-5 py-3 text-sm font-semibold text-white shadow-sm shadow-emerald-600/20 transition hover:-translate-y-0.5"
+            >
+              <span>Conhecer a Ventoflow</span>
+              <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>

@@ -15,7 +15,7 @@ import {
   Layers,
 } from "lucide-react";
 import QRCodeGenerator from "@/components/qrcode/QRCodeGenerator";
-import { SITE_URL, SITE_NAME } from "@/lib/constants";
+import { SITE_URL, SITE_NAME, COMPANY_NAME, COMPANY_URL } from "@/lib/constants";
 
 export const dynamic = "force-static";
 
@@ -88,6 +88,21 @@ const jsonLdWebApplication = {
   browserRequirements: "Requires JavaScript. Requires HTML5.",
   description:
     "Ferramenta online gratuita para criar e customizar QR Codes em tempo real com exportação em PNG de alta resolução e SVG vetorial.",
+  author: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: COMPANY_URL,
+  },
+  provider: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: COMPANY_URL,
+  },
+  creator: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: COMPANY_URL,
+  },
   offers: {
     "@type": "Offer",
     price: "0",

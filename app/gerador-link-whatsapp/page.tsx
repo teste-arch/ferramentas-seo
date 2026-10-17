@@ -14,7 +14,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import WhatsAppGenerator from "@/components/whatsapp/WhatsAppGenerator";
-import { SITE_URL, SITE_NAME } from "@/lib/constants";
+import { SITE_URL, SITE_NAME, COMPANY_NAME, COMPANY_URL } from "@/lib/constants";
 
 // Força a renderização 100% estática (SSG) para máxima performance e indexação pelos bots de busca
 export const dynamic = "force-static";
@@ -88,6 +88,21 @@ const jsonLdWebApplication = {
   browserRequirements: "Requires JavaScript. Requires HTML5.",
   description:
     "Ferramenta online e gratuita para criar links personalizados do WhatsApp (wa.me) com número e mensagem pré-definida, além de QR Code para download.",
+  author: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: COMPANY_URL,
+  },
+  provider: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: COMPANY_URL,
+  },
+  creator: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: COMPANY_URL,
+  },
   offers: {
     "@type": "Offer",
     price: "0",

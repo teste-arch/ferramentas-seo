@@ -13,7 +13,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ColorPaletteGenerator from "@/components/palette/ColorPaletteGenerator";
-import { SITE_URL, SITE_NAME } from "@/lib/constants";
+import { SITE_URL, SITE_NAME, COMPANY_NAME, COMPANY_URL } from "@/lib/constants";
 
 export const dynamic = "force-static";
 
@@ -85,6 +85,21 @@ const jsonLdWebApplication = {
   browserRequirements: "Requires JavaScript. Requires HTML5.",
   description:
     "Ferramenta online gratuita para geração de paletas de cores harmônicas com travas individuais, visualização HEX/RGB/HSL e exportação em imagem PNG e código CSS.",
+  author: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: COMPANY_URL,
+  },
+  provider: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: COMPANY_URL,
+  },
+  creator: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: COMPANY_URL,
+  },
   offers: {
     "@type": "Offer",
     price: "0",

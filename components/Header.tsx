@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { MessageCircle, QrCode, Palette, Layers } from "lucide-react";
+import { MessageCircle, QrCode, Palette, Layers, ExternalLink } from "lucide-react";
 import { VentoSymbol } from "@/components/vento-symbol";
+import { COMPANY_URL } from "@/lib/constants";
 
 export default function Header() {
   return (
@@ -65,9 +66,20 @@ export default function Header() {
 
         {/* Action / Badge */}
         <div className="flex items-center gap-3">
-          <span className="hidden sm:inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 border border-emerald-200">
-            100% Grátis & Sem Cadastro
-          </span>
+          <a
+            href={COMPANY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 border border-emerald-200 transition hover:bg-emerald-100 hover:border-emerald-300"
+            title="Conheça a Ventoflow - Hub de Engenharia e Automação"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span>Por Ventoflow</span>
+            <ExternalLink className="h-3 w-3 text-emerald-600" />
+          </a>
           <Link
             href="/gerador-link-whatsapp"
             className="inline-flex items-center justify-center rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"

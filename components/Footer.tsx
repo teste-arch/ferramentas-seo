@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { Heart } from "lucide-react";
+import { Heart, ExternalLink } from "lucide-react";
 import { VentoSymbol } from "@/components/vento-symbol";
+import { COMPANY_URL, COMPANY_TAGLINE } from "@/lib/constants";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,8 +20,18 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-md text-sm leading-relaxed text-slate-500">
-              Conjunto de ferramentas online gratuitas pensadas para profissionais de marketing,
-              SEO, vendas e empreendedores que buscam agilidade e produtividade no dia a dia.
+              Uma iniciativa da{" "}
+              <a
+                href={COMPANY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-slate-800 underline decoration-emerald-500/50 underline-offset-2 hover:text-emerald-600 hover:decoration-emerald-600 transition inline-flex items-center gap-1"
+              >
+                <span>Ventoflow</span>
+                <ExternalLink className="h-3 w-3 text-emerald-600" />
+              </a>
+              {" "}— {COMPANY_TAGLINE}. Conjunto de ferramentas online gratuitas pensadas para profissionais de marketing,
+              SEO, vendas e tecnologia que buscam máxima agilidade e produtividade no dia a dia.
             </p>
             <div className="text-xs text-slate-400">
               Sem necessidade de login ou cartão de crédito.
@@ -89,6 +100,17 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href={COMPANY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-600 transition hover:text-emerald-600 inline-flex items-center gap-1 font-medium text-emerald-700"
+                >
+                  <span>Sobre a Ventoflow</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
+              <li>
+                <a
                   href="#politica-privacidade"
                   className="text-slate-600 transition hover:text-emerald-600"
                 >
@@ -120,8 +142,17 @@ export default function Footer() {
           <p className="text-xs text-slate-500">
             &copy; {currentYear} Ventoflow. Todos os direitos reservados.
           </p>
-          <p className="flex items-center gap-1 text-xs text-slate-400">
-            Feito com <Heart className="h-3.5 w-3.5 text-rose-500 fill-rose-500" /> para impulsionar seus resultados.
+          <p className="flex items-center gap-1.5 text-xs text-slate-500">
+            <span>Desenvolvido pela engenharia da</span>
+            <a
+              href={COMPANY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-slate-800 hover:text-emerald-600 transition underline underline-offset-2 decoration-emerald-400 inline-flex items-center gap-1"
+            >
+              <span>Ventoflow</span>
+              <ExternalLink className="h-3 w-3 text-emerald-600" />
+            </a>
           </p>
         </div>
       </div>

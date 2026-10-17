@@ -7,3 +7,6 @@ export const SITE_URL = (
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Ventoflow";
+export const COMPANY_NAME = "Ventoflow";
+export const COMPANY_URL = "https://ventoflow.top";
+export const COMPANY_TAGLINE = "Hub de Engenharia e Automação de Missão Crítica";
